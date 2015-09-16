@@ -4,7 +4,9 @@
  */
 package holamundo;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+//import java.util.Date;
 
 /**
  *
@@ -13,7 +15,7 @@ import java.util.Date;
 public class Person {
     private final String name;
     private final String surname;
-    private final Date birthdate;
+    private final Calendar birthdate;
     private static long MILLESECON_PER_YEAR = (long) (1000*60*60*24*365.25);
 
     public String getName() {
@@ -24,7 +26,7 @@ public class Person {
         return surname;
     }
 
-    public Date getBirthdate() {
+    public Calendar getBirthdate() {
         return birthdate;
     }
     
@@ -33,14 +35,14 @@ public class Person {
     }
     
     public int getAge(){
-        Date today = new Date();
-        return (int) (getMillis(today.getTime() - birthdate.getTime()));
+        Calendar today = GregorianCalendar.getInstance();
+        return (int) (getMillis(today.getTimeInMillis() - birthdate.getTimeInMillis()));
     }
     
     private long getMillis(long milli){
         return milli/MILLESECON_PER_YEAR;
     }
-    public Person(String name, String surname, Date birthdate) {
+    public Person(String name, String surname, Calendar birthdate) {
         this.name = name;
         this.surname = surname;
         this.birthdate = birthdate;

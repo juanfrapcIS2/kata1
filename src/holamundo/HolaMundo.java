@@ -4,7 +4,9 @@
  */
 package holamundo;
 
-import java.util.Date;
+import java.util.Calendar;
+//import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -21,7 +23,11 @@ public class HolaMundo {
         System.out.println("Cause I'm a evil Java program");
         
         Person p1;
-        p1 = new Person("Mariponsio", "de Chaar", new Date(64,7,3));
+        Calendar f1;
+        f1 = GregorianCalendar.getInstance();
+        f1.set(1964,7,3);
+        System.out.println("");
+        p1 = new Person("Mariponsio", "de Chaar", f1);
         System.out.println(p1.getAge());    
     }
 }
