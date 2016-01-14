@@ -20,7 +20,7 @@ public class HolaMundo {
     public static void main(String[] args) {
         System.out.println("Hello World");
         System.out.println("I'm going to destroy humanity");// TODO code application logic here
-        System.out.println("Cause I'm a evil Java program");
+        System.out.println("Cause I'm an evil Java program");
         
         Person p1;
         Calendar f1;
